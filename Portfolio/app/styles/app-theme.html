@@ -1,0 +1,488 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<style is="custom-style">
+
+  /*
+   Polymer includes a shim for CSS Custom Properties that we can use for application theming.
+   Below, you'll find the default palette for the Polymer Starter Kit layout. Feel free to play
+   with changing the colors used or generate your own palette of colours at MaterialPalette.com.
+
+   See https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
+   for further information on custom CSS properties.
+   */
+
+  /* Application theme */
+
+  :root {
+    --dark-primary-color: #303F9F;
+    --default-primary-color: #3F51B5;
+    --light-primary-color: #C5CAE9;
+    --text-primary-color: #ffffff; /*text/icons*/
+    --accent-color: #FF4081;
+    --primary-background-color: #524a3e;
+    --primary-text-color: #000;
+    --secondary-text-color: #000;
+    --disabled-text-color: #bdbdbd;
+    --divider-color: #B6B6B6;
+
+    /* Theme Colors */
+
+    --main-yellow: #56dbd1;
+    --main-green: #ff882e;
+    --main-red: #ff5f1e;
+    --main-blue: #ff9d36;
+    --main-orange: #ffc546;
+    --main-art: #ffd54c;;
+
+    /* Components */
+
+    /* paper-drawer-panel */
+    --drawer-menu-color: #ffffff;
+    --drawer-border-color: 1px solid #ccc;
+    --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
+
+    /* paper-menu */
+    --paper-menu-background-color: #fff;
+    --menu-link-color: #111111;
+  }
+
+  /* General styles */
+
+  paper-button.custom {
+    --paper-button-ink-color: #15AF6D;
+  }
+
+  #drawerToolbar {
+    color: var(--secondary-text-color);
+    background-color: var(--drawer-menu-color);
+    border-bottom: var(--drawer-toolbar-border-color);
+  }
+
+  paper-scroll-header-panel {
+    height: 100%;
+  }
+
+  paper-material {
+    border-radius: 2px;
+    height: 100%;
+    padding: 16px 0 16px 0;
+    width: calc(98.66% - 16px);
+    margin: 16px auto;
+    background: #e1cdaf;
+  }
+
+  paper-menu iron-icon {
+    margin-right: 33px;
+    opacity: 0.54;
+  }
+
+  .paper-menu > .iron-selected {
+    color: var(--default-primary-color);
+  }
+
+  paper-menu a {
+    text-decoration: none;
+    color: var(--menu-link-color);
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    min-height: 48px;
+    padding: 0 16px;
+  }
+
+  paper-toolbar{
+    background-color: var(--primary-background-color);
+    color: var(--secondary-text-color);
+  }
+
+  .paper-toolbar-0 .toolbar-tools.paper-toolbar  .title {
+    font-size: 200%;
+  }
+
+  .paper-toolbar-0 .toolbar-tools.paper-toolbar  .detail {
+    font-size: 100%;
+  }
+
+  paper-toolbar.tall .app-name {
+    font-size: 40px;
+    font-weight: 300;
+
+    /* Required for main area's paper-scroll-header-panel custom condensing transformation */
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    color: var(--secondary-text-color);
+  }
+
+  paper-toolbar {
+    color: #fff;
+  }
+
+  b {
+    color: white;
+  }
+
+  #toolbar {
+    display: none;
+  }
+  #about {
+    display: none;
+  }
+
+  #education {
+    display: none;
+  }
+  #experience {
+    display: none;
+  }
+  #projects {
+    display: none;
+  }
+  #art {
+    display: none;
+  }
+
+  .tabbed {
+    padding-left: 50px;
+  }
+
+  #mainToolbar .middle-container  {
+    height: 100%;
+    margin-left: 48px;
+  }
+
+  #mainToolbar:not(.tall) .middle {
+    font-size: 18px;
+    padding-bottom: 0;
+  }
+
+  #mainToolbar .bottom {
+    margin-left: 48px;
+    /* Required for main area's paper-scroll-header-panel custom condensing transformation */
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  /* Height of the scroll area */
+  .content {
+    background-color: var(--primary-background-color);
+  }
+
+  img {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.54), 0 1px 5px 0 rgba(0, 0, 0, 0.52), 0 3px 1px -2px rgba(0, 0, 0, 0.52);
+    width: 600px;
+    height: 100%;
+  }
+
+  .android {
+    width: 300px;
+  }
+
+  .newTitle {
+    color: var(--primary-text-color);
+    font-size: 40px;
+    padding-right: 10px;
+  }
+
+  .detail {
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  div.container {
+    width: 100%;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+    overflow:auto;
+    position:relative;
+    flex-direction: row;
+  }
+
+  div.callContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow:auto;
+    position:relative;
+  }
+
+  .callTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    color: #fff;
+  }
+
+  .callDetail {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+  }
+
+  .big {
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+  }
+
+  .inherit {
+    color: inherit;
+    background-color: inherit;
+  }
+
+  .box1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    padding-right: 52px;
+  }
+
+  .icons {
+    
+    color: white;
+  }
+
+  .box2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 52px;
+    padding-right: 0px;
+    
+  }
+
+  
+
+  paper-button {
+    color: #000;
+    --paper-button-ink-color: #000;
+  }
+  paper-button:hover {
+    animation: hover ease-in 0.1s;
+    animation-fill-mode: forwards;
+  } 
+
+  @keyframes hover {
+    from  {color: #000; }
+    to    {color: #fff; }
+  }
+
+  paper-button.about {
+    background-color: var(--main-red);
+    border-radius: 0px;
+    border: 0;
+  }
+
+   paper-button.education {
+    background-color: var(--main-green);
+    border-radius: 0px;
+    border: 0;
+  }
+
+  paper-button.experience {
+    background-color: var(--main-blue);
+    border-radius: 0px;
+    border: 0;
+  }
+
+  paper-button.projects {
+    background-color: var(--main-orange);
+    border-radius: 0px;
+    border: 0;
+    
+  }
+
+  paper-button.art {
+    background-color: var(--main-art);
+    border-radius: 0px;
+    border: 0;
+    
+  }
+  /* Breakpoints */
+
+  /* Small */
+  @media (max-width: 600px) {
+
+    paper-material {
+      --menu-container-display: none;
+      width: calc(97.33% - 32px);
+      padding-left: 16px;
+      padding-right: 16px;
+      border-radius: 0px;
+
+    }
+
+    
+    paper-toolbar {
+      font-size: 40px;
+      font-weight: 700;
+      --paper-toolbar-height: 128px;
+      border-bottom: 5px solid rgba(0,0,0,0.3);
+    }
+
+    #drawer .paper-toolbar {
+      margin-left: 16px;
+    }
+
+    #overlay {
+      min-width: 360px;
+    }
+
+    .bg {
+      background: white;
+    }
+
+  }
+
+  /* Tablet+ */
+  @media (min-width: 601px) {
+
+    paper-material {
+      width: calc(98% - 46px);
+      margin-bottom: 32px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    #drawer.paper-drawer-panel > [drawer] {
+      border-right: 1px solid rgba(0, 0, 0, 0.14);
+    }
+
+    iron-pages {
+      padding: 48px 62px;
+      min-height:100vh;
+    }
+
+  }
+
+  /* Material Design Adaptive Breakpoints */
+  /*
+    Below you'll find CSS media queries based on the breakpoint guidance
+    published by the Material Design team. You can choose to use, customise
+    or remove these breakpoints based on your needs.
+
+    http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
+   */
+
+  /* mobile-small */
+  @media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) { 
+    paper-toolbar{
+      color: red;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+
+    paper-button {
+      height: 10px;
+    }
+
+  }
+  /* mobile-large */
+  @media all and (min-width: 361px) and (orientation: portrait) { }
+  /* mobile-small-landscape */
+  @media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) { 
+    paper-button {
+      height: 10px;
+      width: 30px;
+      font-size: 8pt;
+    }
+    b {
+      font-size: 10pt;
+    }
+  }
+  /* mobile-large-landscape */
+  @media all and (min-width: 481px) and (orientation: landscape) { }
+  /* tablet-small-landscape */
+  @media all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape) { 
+    paper-button {
+      height: 10px;
+      width: 30px;
+      font-size: 8pt;
+    }
+    b {
+      font-size: 10pt;
+    }
+  }
+  /* tablet-large-landscape */
+  @media all and (min-width: 961px) and (orientation: landscape) { }
+  /* tablet-small */
+  @media all and (min-width: 600px) and (orientation: portrait) { 
+    paper-button {
+      height: 10px;
+      width: 30px;
+      font-size: 8pt;
+    }
+    b {
+      font-size: 10pt;
+    }
+  }
+  /* tablet-large */
+  @media all and (min-width: 601px) and (max-width: 840px) and (orientation : portrait) { 
+    paper-button {
+      height: 10px;
+      width: 30px;
+      font-size: 8pt;
+    }
+    b {
+      font-size: 10pt;
+    }
+  }
+  /* desktop-x-small-landscape */
+  @media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) { }
+  /* desktop-x-small */
+  @media all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3) { 
+    paper-button {
+      height: 10px;
+      width: 30px;
+      font-size: 8pt;
+    }
+    b {
+      font-size: 10pt;
+    }
+  }
+  /* desktop-small-landscape */
+  @media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) { }
+  /* desktop-small */
+  @media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) { 
+    paper-button {
+      height: 10px;
+      width: 30px;
+      font-size: 8pt;
+    }
+    b {
+      font-size: 10pt;
+    }
+  }
+  /* desktop-medium-landscape */
+  @media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) { }
+  /* desktop-medium */
+  @media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) { }
+  /* desktop-large */
+  @media all and (min-width: 1281px) and (max-width: 1600px) { }
+  /* desktop-xlarge */
+  @media all and (min-width: 1601px) and (max-width: 1920px) { }
+</style>

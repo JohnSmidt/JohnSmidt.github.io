@@ -1,0 +1,24 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.0.7
+[debug] Platform:     darwin
+[debug] Node Version: v4.0.0
+[debug] Time:         Sat Apr 29 2017 16:08:40 GMT-0600 (MDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/john-smidt-portfolio 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/john-smidt-portfolio/tokens 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'john-smidt-portfolio'...
+[info] 
+[info] i  deploying database, hosting
+[info] ✔  database: rules ready to deploy.
+[info] i  hosting: preparing app directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/john-smidt-portfolio/uploads/-KivkZUl3A2m9m6meKZy?fileCount=41&message= 
+[debug] Error: write EPIPE
+    at Object.exports._errnoException (util.js:837:11)
+    at exports._exceptionWithHostPort (util.js:860:20)
+    at WriteWrap.afterWrite (net.js:760:14)

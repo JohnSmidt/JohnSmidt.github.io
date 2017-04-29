@@ -1,0 +1,310 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Polymer Starter Kit" />
+  <title>John Smidt's Portfolio</title>
+  <!-- Place favicon.ico in the `app/` directory -->
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#2E3AA1">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json"> 
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endreplace-->
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+
+  <script>
+   function about() {
+      document.getElementById('about').style.display = "block";
+      document.getElementById('education').style.display = "none";
+      document.getElementById('experience').style.display = "none";
+      document.getElementById('projects').style.display = "none";
+      document.getElementById('art').style.display = "none";
+      document.getElementById('toolbar').style.display = "block";
+      document.getElementById('call-to-action').style.display = "none";
+    }
+    function education() {
+      document.getElementById('about').style.display = "none";
+      document.getElementById('education').style.display = "block";
+      document.getElementById('experience').style.display = "none";
+      document.getElementById('projects').style.display = "none";
+      document.getElementById('art').style.display = "none";
+      document.getElementById('toolbar').style.display = "block";
+      document.getElementById('call-to-action').style.display = "none";
+    }
+    function experience() {
+      document.getElementById('about').style.display = "none";
+      document.getElementById('education').style.display = "none";
+      document.getElementById('experience').style.display = "block";
+      document.getElementById('projects').style.display = "none";
+      document.getElementById('art').style.display = "none";
+      document.getElementById('toolbar').style.display = "block";
+      document.getElementById('call-to-action').style.display = "none";
+    }
+    function projects() {
+      document.getElementById('about').style.display = "none";
+      document.getElementById('education').style.display = "none";
+      document.getElementById('experience').style.display = "none";
+      document.getElementById('projects').style.display = "block";
+      document.getElementById('art').style.display = "none";
+      document.getElementById('toolbar').style.display = "block";
+      document.getElementById('call-to-action').style.display = "none";
+    }
+    function art() {
+      document.getElementById('about').style.display = "none";
+      document.getElementById('education').style.display = "none";
+      document.getElementById('experience').style.display = "none";
+      document.getElementById('projects').style.display = "none";
+      document.getElementById('art').style.display = "block";
+      document.getElementById('toolbar').style.display = "block";
+      document.getElementById('call-to-action').style.display = "none";
+    }
+
+   </script>
+
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+  <span id="browser-sync-binding"></span>
+  <template is="dom-bind" id="app">
+
+    
+<paper-scroll-header-panel fixed >
+  <paper-toolbar id="toolbar">
+  <!-- <paper-icon-button icon="home"></paper-icon-button> -->
+
+    <div class="container">
+      <div class="box1">
+        <span class="newTitle"><b>John Smidt</b></span>
+        <span class="detail">&#8226; (208) 691-6570 &#8226;</span>
+        <div class="icons">
+          <a href="mailto:JohnMSmidt@gmail.com" tabindex="-1" class="inherit">
+            <paper-icon-button class="icons" icon="mail"></paper-icon-button>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/john-smidt-1b65aa98/" tabindex="-1" target="_blank">
+            <paper-icon-button src="../images/In-White-121px-TM.png" alt="LinkedIn" title="LinkedIn"></paper-icon-button>
+          </a>
+          
+          <a href="https://github.com/JohnSmidt" tabindex="-1" target="_blank">
+            <paper-icon-button src="../images/GitHub-Mark-Light-120px-plus.png" alt="GitHub" title="GitHub" ></paper-icon-button>
+          </a>
+        </div>
+      </div>
+     
+      <div class="box2">
+        <paper-button raised class="about" onclick="about()">About Me</paper-button>
+        <paper-button raised class="education" onclick="education()">Education</paper-button>
+        <paper-button raised class="experience" onclick="experience()">Experience</paper-button>
+        <paper-button raised class="projects" onclick="projects()">Projects</paper-button>
+        <paper-button raised class="art" onclick="art()">Art</paper-button>
+      </div>
+    </div>
+  
+  </paper-toolbar>
+
+  <div class="container">
+  </div>
+ 
+
+       <!-- Main Content -->
+        <div class="content">
+          <iron-pages attr-for-selected="data-route" selected="{{route}}">
+
+            <section data-route="home">
+
+              <div id="call-to-action" class="call">
+
+                <h1 class="callTitle">John Smidt</h1>
+                <h2 class="callDetail">(208) 691-6570</h2>
+                <div class="callContainer">
+                  <paper-button raised class="about big" onclick="about()">About Me</paper-button>
+                  <paper-button raised class="education big" onclick="education()">Education</paper-button>
+                  <paper-button raised class="experience big" onclick="experience()">Experience</paper-button>
+                  <paper-button raised class="projects big" onclick="projects()">Projects</paper-button>
+                  <paper-button raised class="art big" onclick="art()">Art</paper-button>
+                </div>
+              </div>
+
+
+              <div id="about">
+                <paper-material elevation="1">
+                  <h1 id="about">About Me</h1>
+
+                  <p class="paper-font-subhead">You now have:</p>
+                  <my-list></my-list>
+
+                  <p class="paper-font-body2">Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
+                </paper-material>
+              </div>
+
+              <div id="education">
+                <paper-material elevation="1">
+                  <h1>Education</h1>
+                </paper-material>
+              </div>
+
+              <div id="experience">
+                <paper-material elevation="1">
+                  <h1>Experience</h1>
+                  <h3>Geometry Wars</h3>
+
+                    <div class="container"> 
+                      <div class="box1"> 
+                       I wanted to learn the basics of Unity and game development, so I started out with something small. This Geometry Wars clone was written in javascript, since it was a language I already knew, and would allow me to focus soley on the Unity framework. The project took about 30 hours total, and contains a score, a camera that allows the player to see the most of the playing field at all times, and different AI to make the game more exciting. Purple enemies move in sine wavelengths, blue enemies move towards the player, and green enemies move towards the player, but evade bullets.
+                      </div> 
+                      <div class ="box2" > 
+                        <img src="../images/GW.gif"></img>
+                      </div>
+                    </div>
+                </paper-material>
+              </div>
+
+              <div id="projects" class="w3-container">
+               <paper-material elevation="1" class="w3-animate-top">
+                  <h1>Projects</h1>
+                  <h3>Geometry Wars</h3>
+
+                    <div class="container"> 
+                      <div class="box1"> 
+                       I wanted to learn the basics of Unity and game development, so I started out with something small. This Geometry Wars clone was written in javascript, since it was a language I already knew, and would allow me to focus soley on the Unity framework. The project took about 30 hours total, and contains a score, a camera that allows the player to see the most of the playing field at all times, and different AI to make the game more exciting. Purple enemies move in sine wavelengths, blue enemies move towards the player, and green enemies move towards the player, but evade bullets.
+                      </div> 
+                      <div class ="box2" > 
+                        <img src="../images/GW.gif"></img>
+                      </div>
+                    </div>
+                </paper-material>
+
+                <paper-material elevation="1">
+                  <h3>Sherfox Holmes</h3>
+                  <div class="container">
+                     <div class="box1"> 
+                       For this project, I wanted to deepen my understanding of Unity by making a game with more complex features than a simple space shooter. This game was written in C#, which was a language that was completely new to me at the time. Sherfox Holmes is a randomized detective game based on memory. The player must question suspects and determine if they are telling the truth, or lying, based on evidence found in a large mansion. The player must be hesitant, however, since some suspects may be misinformed, and their actions may be innocent, but incorrect.
+                      </div> 
+                      <div class ="box2" > 
+                        <img src="../images/GW.gif"></img>
+                      </div>
+                    </div>
+                </paper-material>
+
+                <paper-material elevation="1">
+                  <h3>3D Pacman</h3>
+
+                    <div class="container"> 
+                      <div class="box1"> 
+                         <h4> Built with Unity</h4>
+                      </div> 
+                      <div class ="box2" > 
+                        <img src="../images/pacMan.png" class="pacMan" ></img>
+                      </div>
+                    </div>
+                </paper-material>
+
+                <paper-material elevation="1">
+                  <h3>Lazyman Ironman</h3>
+                  <div class="container"> 
+                      <div class="box1"> 
+                         <h4> Built with Unity</h4>
+                      </div> 
+                      <div class ="box2" > 
+                        <img src="../images/HOMEConcept.png" class="android" ></img>
+                        <img src="../images/AndroidBase.png" class="android" ></img>
+                      </div>
+                    </div>
+                </paper-material>
+
+                
+              </div>
+
+              <div id="art">
+                <paper-material elevation="1">
+                  <h1>Art</h1>
+                  <div class="container">
+                    <img src="../images/Zer0.png">
+                  </div>
+                </paper-material>
+              </div>
+            </section>
+
+
+          </iron-pages>
+        </div>
+      
+</paper-scroll-header-panel>
+
+    <!-- Uncomment next block to enable Service Worker support (1/2) -->
+    <!--
+    <paper-toast id="caching-complete"
+                 duration="6000"
+                 text="Caching complete! This app will work offline.">
+    </paper-toast>
+
+    <platinum-sw-register auto-register
+                          clients-claim
+                          skip-waiting
+                          on-service-worker-installed="displayInstalledToast">
+      <platinum-sw-cache default-cache-strategy="fastest"
+                         cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+    -->
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js">
+
+   
+  </script>
+  <!-- endbuild-->
+</body>
+
+</html>
